@@ -6,7 +6,6 @@ const routes = [
 ]
 
 export const router = createRouter({
-	// todo this maybe have error
 	history: createWebHistory(),
 	routes,
 })

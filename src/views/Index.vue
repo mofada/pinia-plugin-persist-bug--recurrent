@@ -8,16 +8,18 @@
 		<aside class="aside">
 
 		</aside>
-		<div class="container">
+		<div class="container" >
+			<video controls height="300px">
+				<source id="mp4" src="../../video/replay.mp4" type="video/mp4">
+			</video>
 			<div class="card">1.click right top 'login out' button</div>
 			<div class="card">2.in login page, input 'email' and 'name'.</div>
 			<div class="card">3.click 'login' button, go here (main page)</div>
 			<div class="card">4.refresh page(F5)</div>
 			<div class="card">5.look right top, 'welcome ${name}', name will dispose</div>
-			<div class="card"></div>
-			<div class="card"></div>
-			<div class="card"></div>
-			<div class="card"></div>
+			<div class="card" style="color: #ff5a5f">tip: I'm input 'localhost:3000/login', and login. refresh page(F5)
+				, message not dispose
+			</div>
 		</div>
 	</div>
 </template>
@@ -104,9 +106,13 @@ export default {
 .container {
 	grid-area: content;
 	margin: 16px;
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(300px, auto));
-	grid-template-rows: max-content;
+	display: flex;
+	flex-direction: column;
+}
+
+video {
+	flex: 1 1 auto;
+	align-self: center;
 }
 
 .card {
@@ -117,6 +123,7 @@ export default {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	aspect-ratio: 16/9;
+	font-size: 20px;
+	flex: 0 0 auto;
 }
 </style>

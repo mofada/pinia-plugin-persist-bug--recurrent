@@ -6,7 +6,7 @@ import piniaPluginPersist from 'pinia-plugin-persist'
 import {router} from "./router";
 
 createApp(App)
-	// 使用pinia代替vuex缓存
+	// use pinia plugin persist
 	.use(createPinia().use(piniaPluginPersist))
 	// use router
 	.use(router)

@@ -1,11 +1,12 @@
 <template>
 	<div class="page">
-		<div class="banner"></div>
+		<div class="banner">
+		</div>
 		<div class="form-info">
-				<div class="title">WELCOME</div>
-				<input v-model="email" name="email" placeholder="please input email" type="email">
-				<input v-model="name" name="name" placeholder="please input name">
-				<button @click.stop="login">login</button>
+			<div class="title">WELCOME</div>
+			<input v-model="email" name="email" placeholder="please input email" type="email">
+			<input v-model="name" name="name" placeholder="please input name">
+			<button @click.stop="login">login</button>
 		</div>
 	</div>
 </template>

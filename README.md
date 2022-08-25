@@ -9,6 +9,22 @@ However, directly enter the login (http://localhost:3000/login), enter the email
 enter the home page. At this time, clicking refresh will not lose user information.
 
 
+# Temporary solution
+```typescript
+actions: {
+	/**
+	 * save user info
+	 * @param userInfo
+	 */
+	setUserInfo(userInfo: IUserInfo) {
+		this.$patch(userInfo)
+        
+		//  fixme save to localStorage
+		localStorage.setItem(STORE_KEY, JSON.stringify(userInfo))
+	}
+},
+```
+
 <!-- mp4格式 -->
 <video id="video" controls="" preload="none" >
       <source id="mp4" src="./video/replay.mp4" type="video/mp4">

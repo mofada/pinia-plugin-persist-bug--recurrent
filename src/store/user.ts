@@ -25,6 +25,9 @@ export const useUserStore = defineStore(STORE_KEY, {
 		 */
 		setUserInfo(userInfo: IUserInfo) {
 			this.$patch(userInfo)
+
+			//  fixme save to localStorage
+			localStorage.setItem(STORE_KEY, JSON.stringify(userInfo))
 		}
 	},
 	persist: {
